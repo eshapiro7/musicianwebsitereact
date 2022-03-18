@@ -1,3 +1,4 @@
+/*
 .App {
   text-align: center;
 }
@@ -35,4 +36,144 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+
+body {
+  font-family: monospace;
+  background-color: #14436b;
+}
+
+h1,
+h2 {
+  font-family: "Staatliches", cursive;
+  font-size: 100px;
+}
+
+h2 {
+  color: #3046c5;
+}
+
+header h2 {
+  color: #cec8ff;
+}
+
+header a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+h3 {
+  font-family: "Staatliches", cursive;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.site-footer {
+  background-color: #14436b;
+  padding: 20px 0;
+  position: relative;
+  top: 20px;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: px;
+  background-color: #14436b;
+  color: white;
+  text-align: center;
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.navbar {
+  background-color: #14436b;
+}
+
+.tab-content {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 10px;
+}
+
+.carousel {
+  border: solid white;
+}
+
+.breadcrumb {
+  background: none;
+}
+
+.card {
+  position: relative;
+  top: 20px;
+  background: none;
+}
+
+.card-body {
+  position: relative;
+  top: 20px;
+  left: 80px;
+  background: none;
+}
+
+.form-group {
+  color: white;
+  position: relative;
+  top: 20px;
+}
+
+#form-submit {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 10px;
+}
+
+.btn-spotify {
+  background-color: #1db954;
+}
+.modal-body {
+  background-color: #14436b;
+}
+
+.modal-header {
+  background-color: #14436b;
+}
+
+header {
+  color: white;
+  font-size: 20px;
+  margin-left: 150px;
 }

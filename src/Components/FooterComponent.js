@@ -6,7 +6,10 @@ function Footer(props) {
         <footer className="site-footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 text-center">
+                    <div className="col-12 mt-5 text-center">
+                        <hr color="white"></hr>
+                    </div>
+                    <div className="col-12 mt-5 text-center">
                         <a
                             className="btn btn-social-icon btn-instagram"
                             href="http://instagram.com/"
@@ -20,10 +23,10 @@ function Footer(props) {
                             <i className="fa fa-facebook" />
                         </a>{" "}
                         <a
-                            className="btn btn-social-icon btn-twitter"
-                            href="http://twitter.com/"
+                            className="btn btn-social-icon btn-spotify"
+                            href="http://spotify.com/"
                         >
-                            <i className="fa fa-twitter" />
+                            <i className="fa fa-spotify" />
                         </a>{" "}
                         <a
                             className="btn btn-social-icon btn-google"
@@ -32,15 +35,17 @@ function Footer(props) {
                             <i className="fa fa-youtube" />
                         </a>
                     </div>
-                    <div className="col-12 text-center">
+                    <div className="col-12 text-center mt-3">
                         <a
                             role="button"
                             className="btn btn-link"
                             href="mailto:dane.scozzari@gmail.com"
                         >
-                            <i className="fa fa-envelope-o" />
                             dane.scozzari@gmail.com
                         </a>
+                    </div>
+                    <div className="col-12 mt-5 text-center">
+                        <hr color="white"></hr>
                     </div>
                 </div>
             </div>

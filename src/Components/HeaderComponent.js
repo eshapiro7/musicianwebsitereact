@@ -18,8 +18,7 @@ class Header extends Component {
 
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <div className="row">
-                            <div className="col">
+                        
                                 <Nav navbar>
                                     <NavItem>
                                         <NavLink
@@ -62,34 +61,37 @@ class Header extends Component {
                                         </NavLink>
                                     </NavItem>
                                 </Nav>
-                                <div className="col-12 mt-5 text-center">
-                        <a
-                            className="btn btn-social-icon btn-instagram"
-                            href="http://instagram.com/"
-                        >
-                            <i className="fa fa-instagram" />
-                        </a>{" "}
-                        <a
-                            className="btn btn-social-icon btn-facebook"
-                            href="http://www.facebook.com/"
-                        >
-                            <i className="fa fa-facebook" />
-                        </a>{" "}
-                        <a
-                            className="btn btn-social-icon btn-spotify"
-                            href="http://spotify.com/"
-                        >
-                            <i className="fa fa-spotify" />
-                        </a>{" "}
-                        <a
-                            className="btn btn-social-icon btn-google"
-                            href="http://youtube.com/"
-                        >
-                            <i className="fa fa-youtube" />
-                        </a>
-                    </div>
-                            </div>
-                        </div>
+                           
+                            
+                            <span className="navbar-text ml-auto">
+                            
+                                <a
+                                    className="btn btn-social-icon btn-instagram"
+                                    href="http://instagram.com/"
+                                >
+                                    <i className="fa fa-instagram" />
+                                </a>{" "}
+                                <a
+                                    className="btn btn-social-icon btn-facebook"
+                                    href="http://www.facebook.com/"
+                                >
+                                    <i className="fa fa-facebook" />
+                                </a>{" "}
+                                <a
+                                    className="btn btn-social-icon btn-spotify"
+                                    href="http://spotify.com/"
+                                >
+                                    <i className="fa fa-spotify" />
+                                </a>{" "}
+                                <a
+                                    className="btn btn-social-icon btn-google"
+                                    href="http://youtube.com/"
+                                >
+                                    <i className="fa fa-youtube" />
+                                </a>
+                
+                            </span>
+                        
                     </div>
                 </Navbar>
             </>

@@ -178,3 +178,7 @@ header {
   font-size: 20px;
   margin-left: 150px;
 }
+
+.background-image {
+  background-image: "src/img/dane1.jpg";
+}

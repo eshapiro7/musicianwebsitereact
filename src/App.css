@@ -180,5 +180,6 @@ header {
 }
 
 .background-image {
-  background-image: "src/img/dane1.jpg";
+
+  background-image: 'src/img/dane1.jpg';
 }

@@ -4,6 +4,7 @@ import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import About from "./AboutComponent";
 import Music from "./MusicComponent";
+import Gigs from "./GigsComponent";
 import { Switch, Redirect, Route } from "react-router-dom";
 
 class Main extends Component {
@@ -20,6 +21,9 @@ class Main extends Component {
                     </Route>
                     <Route path="/music">
                         <Music />
+                    </Route>
+                    <Route path="/gigs">
+                        <Gigs />
                     </Route>
                     <Redirect to="/home" />
                 </Switch>

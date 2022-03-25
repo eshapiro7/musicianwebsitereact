@@ -179,7 +179,11 @@ header {
   margin-left: 150px;
 }
 
-.background-image {
+#bg-img {
+  background-size: cover;
+  background-position: 0px -200px;
+}
 
-  background-image: 'src/img/dane1.jpg';
+.card {
+  color: white;
 }

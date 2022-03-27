@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import HumanRace from "../img/thehumanrace.jpg";
-import Bandcamp from "../img//open-bandcamp-logo-white-11562938577ooqpoam563.png";
+import HumanRace from "./../../public/img/thehumanrace.jpg";
+import Bandcamp from "./public/img/open-bandcamp-logo-white-11562938577ooqpoam563.png";
 
 class Music extends Component {
     constructor(props) {

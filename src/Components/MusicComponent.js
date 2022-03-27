@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import HumanRace from "../img/thehumanrace.jpg";
+
 
 class Music extends Component {
     constructor(props) {
@@ -85,7 +87,7 @@ class Music extends Component {
                             <a onClick={this.toggleModal4}>
                                 {" "}
                                 <img
-                                    src="./src/img/thehumanrace.jpg"
+                                    src={HumanRace}
                                     alt="human race"
                                     height="200"
                                 />

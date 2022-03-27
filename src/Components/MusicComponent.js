@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import HumanRace from "../img/thehumanrace.jpg";
-
+import Bandcamp from "../img//open-bandcamp-logo-white-11562938577ooqpoam563.png";
 
 class Music extends Component {
     constructor(props) {
@@ -87,11 +87,7 @@ class Music extends Component {
                             <a onClick={this.toggleModal4}>
                                 {" "}
                                 <img
-<<<<<<< HEAD
                                     src={HumanRace}
-=======
-                                    src={"./src/img/thehumanrace.jpg"}
->>>>>>> e654cf2bbcc2fafea84c365544b81be8d0255192
                                     alt="human race"
                                     height="200"
                                 />
@@ -136,7 +132,7 @@ class Music extends Component {
                                         <a href="https://willleet.bandcamp.com/album/morning-songs">
                                             {" "}
                                             <img
-                                                src="img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
+                                                src={Bandcamp}
                                                 alt="bandcamp"
                                                 height="100"
                                             />
@@ -184,9 +180,7 @@ class Music extends Component {
                                         <a href="https://olivetiger.bandcamp.com/album/softest-eyes-side-a">
                                             {" "}
                                             <img
-                                                src={
-                                                    "img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
-                                                }
+                                                src={Bandcamp}
                                                 alt="bandcamp"
                                                 height="100"
                                             />
@@ -234,7 +228,7 @@ class Music extends Component {
                                         <a href="https://olivetiger.bandcamp.com/album/until-my-body-breaks">
                                             {" "}
                                             <img
-                                                src="img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
+                                                src={Bandcamp}
                                                 alt="bandcamp"
                                                 height="100"
                                             />

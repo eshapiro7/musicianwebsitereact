@@ -85,7 +85,7 @@ class Music extends Component {
                             <a onClick={this.toggleModal4}>
                                 {" "}
                                 <img
-                                    src="./src/img/thehumanrace.jpg"
+                                    src={"./src/img/thehumanrace.jpg"}
                                     alt="human race"
                                     height="200"
                                 />
@@ -178,7 +178,9 @@ class Music extends Component {
                                         <a href="https://olivetiger.bandcamp.com/album/softest-eyes-side-a">
                                             {" "}
                                             <img
-                                                src="img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
+                                                src={
+                                                    "img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
+                                                }
                                                 alt="bandcamp"
                                                 height="100"
                                             />

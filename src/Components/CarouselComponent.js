@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Dane1 from '../img/dane1.jpg';
-import Dane2 from '../img/dane2.JPG';
-import Dane3 from '../img/dane4.png';
+import Dane1 from "../img/dane1.jpg";
+import Dane2 from "../img/dane2.JPG";
+import Dane3 from "../img/dane4.png";
 import {
     Carousel,
     CarouselItem,
@@ -12,25 +12,22 @@ import {
 const items = [
     {
         id: 0,
-        src: {Dane1},
-        altText: "Slide 1" 
-       
+        src: Dane1,
+        altText: "Slide 1",
     },
     {
         id: 1,
-        src: {Dane2},
+        src: Dane2,
         altText: "Slide 2",
-     
     },
     {
         id: 2,
-        src: { Dane3 },
+        src: Dane3,
         altText: "Slide 3",
-        
     },
 ];
 
-class Example extends Component {
+class CarouselDane extends Component {
     constructor(props) {
         super(props);
         this.state = { activeIndex: 0 };
@@ -82,37 +79,46 @@ class Example extends Component {
                     onExited={this.onExited}
                     key={item.id}
                 >
-                    <img src={item.src} alt={item.altText} />
-                    
+                    <img
+                        src={item.src}
+                        alt={item.altText}
+                        className="d-block w-100"
+                    />
                 </CarouselItem>
             );
         });
 
         return (
-            <Carousel
-                activeIndex={activeIndex}
-                next={this.next}
-                previous={this.previous}
-            >
-                <CarouselIndicators
-                    items={items}
-                    activeIndex={activeIndex}
-                    onClickHandler={this.goToIndex}
-                />
-                {slides}
-                <CarouselControl
-                    direction="prev"
-                    directionText="Previous"
-                    onClickHandler={this.previous}
-                />
-                <CarouselControl
-                    direction="next"
-                    directionText="Next"
-                    onClickHandler={this.next}
-                />
-            </Carousel>
+            <div className="container">
+                <div className="row row-content">
+                    <div className="col-md-8 mx-auto">
+                        <Carousel
+                            activeIndex={activeIndex}
+                            next={this.next}
+                            previous={this.previous}
+                        >
+                            <CarouselIndicators
+                                items={items}
+                                activeIndex={activeIndex}
+                                onClickHandler={this.goToIndex}
+                            />
+                            {slides}
+                            <CarouselControl
+                                direction="prev"
+                                directionText="Previous"
+                                onClickHandler={this.previous}
+                            />
+                            <CarouselControl
+                                direction="next"
+                                directionText="Next"
+                                onClickHandler={this.next}
+                            />
+                        </Carousel>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
 
-export default Example;
+export default CarouselDane;

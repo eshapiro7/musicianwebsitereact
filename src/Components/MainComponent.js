@@ -5,6 +5,7 @@ import Home from "./HomeComponent";
 import About from "./AboutComponent";
 import Music from "./MusicComponent";
 import Gigs from "./GigsComponent";
+import Contact from "./ContactComponent";
 import { Switch, Redirect, Route } from "react-router-dom";
 
 class Main extends Component {
@@ -24,6 +25,9 @@ class Main extends Component {
                     </Route>
                     <Route path="/gigs">
                         <Gigs />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
                     </Route>
                     <Redirect to="/home" />
                 </Switch>

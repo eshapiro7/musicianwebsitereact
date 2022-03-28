@@ -1,10 +1,11 @@
 import React from "react";
-import Example from "./CarouselComponent";
+import CarouselDane from "./CarouselComponent";
 
 export const Home = () => {
     return (
         <>
-            <Example />
+            <hr color="white"></hr>
+            <CarouselDane />
         </>
     );
 };

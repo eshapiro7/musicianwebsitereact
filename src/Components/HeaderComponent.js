@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Nav, Navbar, NavItem, Jumbotron } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 class Header extends Component {
     render() {
@@ -10,7 +10,7 @@ class Header extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <h1>Dane Scozzari</h1>
+                                <h1><Link to='/home'>Dane Scozzari</Link></h1>
                             </div>
                         </div>
                     </div>

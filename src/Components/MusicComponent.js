@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import HumanRace from "../../assets/img/thehumanrace.jpg";
-import Bandcamp from "../../assets/img/open-bandcamp-logo-white-11562938577ooqpoam563.png";
+import HumanRace from '../img/thehumanrace.jpg';
+import Bandcamp from '../img/bandcamp.png'
 
 class Music extends Component {
     constructor(props) {
@@ -276,7 +276,7 @@ class Music extends Component {
                                         <a href="https://bandcamp.com/">
                                             {" "}
                                             <img
-                                                src="img/open-bandcamp-logo-white-11562938577ooqpoam563.png"
+                                                src={Bandcamp}
                                                 alt="bandcamp"
                                                 height="100"
                                             />

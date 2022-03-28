@@ -1,12 +1,12 @@
 import React from "react";
-import background from "../img/dane1.jpg";
 import { Card, CardBody, CardHeader } from 'reactstrap';
+import background from '../img/dane1.jpg';
 
 function Gigs() {
     
         return (
             <>
-                <div id="bg-img" style={{ backgroundImage: `url(${background})`}}>
+                 <div id="bg-img" style={{ backgroundImage: `url(${background})` }}>
                     <div className="container">
                     <Card>
                         <CardHeader><h3>Upcoming Gigs</h3></CardHeader>

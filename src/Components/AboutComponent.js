@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import background from "../img/dane1.jpg";
+import background from '../img/dane1.jpg'
 
 class About extends Component {
     render() {
         return (
             <>
-                <div id="bg-img" style={{ backgroundImage: `url(${background})` }}>
+                 <div id="bg-img" style={{ backgroundImage: `url(${background})` }}>
                     <div className="container">
                         <div className="row row-content">
                             <h3>

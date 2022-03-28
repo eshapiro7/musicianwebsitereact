@@ -1,31 +1,32 @@
 import React, { Component } from "react";
+import Dane1 from '../img/dane1.jpg';
+import Dane2 from '../img/dane2.JPG';
+import Dane3 from '../img/dane4.png';
 import {
     Carousel,
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption,
 } from "reactstrap";
-import Dane1 from "./public/img/dane1.jpg";
 
 const items = [
     {
-        src: { Dane1 },
-        altText: "Slide 1",
-        caption: "Slide 1",
         id: 0,
+        src: {Dane1},
+        altText: "Slide 1" 
+       
     },
     {
-        src: "public/img/dane1.jpg",
-        altText: "Slide 2",
-        caption: "Slide 2",
         id: 1,
+        src: {Dane2},
+        altText: "Slide 2",
+     
     },
     {
-        src: { Dane1 },
-        altText: "Slide 3",
-        caption: "Slide 3",
         id: 2,
+        src: { Dane3 },
+        altText: "Slide 3",
+        
     },
 ];
 
@@ -82,10 +83,7 @@ class Example extends Component {
                     key={item.id}
                 >
                     <img src={item.src} alt={item.altText} />
-                    <CarouselCaption
-                        captionText={item.caption}
-                        captionHeader={item.caption}
-                    />
+                    
                 </CarouselItem>
             );
         });

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import background from '../img/dane1.jpg';
+import { GIGLIST } from "../giglist";
 
+/*
 const giglist = [
 {
     id: 0, 
@@ -41,23 +43,18 @@ const giglist = [
 }
 
 ];
+*/
 
 class GigCopy extends Component {
-    constructor(props) {
-        super(props);
-
-        this.date = this.date;
-        this.location= this.location;
-        this.ticket=this.ticket;
-    }
+  
 
     render() {
-        const gigs = giglist.map((gig) => {
+        const gigs = GIGLIST.map((gig) => {
             return (
                
                     <Card>
                         <CardBody>
-                            <dl className="row">
+                            <dl className="row row-content text-center">
                                 <dt className="col-4">{gig.date}</dt>
                                 <dt className="col-4">{gig.location}</dt>
                                 <dt className="col-4"><button className="btn btn-md btn-info"><a href={gig.ticket} target="_blank">Tickets</a></button></dt>

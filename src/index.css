@@ -64,14 +64,6 @@ h3 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-p {
-  color: white;
-  font-size: 20px;
-  position: relative;
-  top: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .site-footer {
   background-color: #14436b;
   padding: 20px 0;
@@ -85,12 +77,6 @@ p {
   background-color: #14436b;
   color: white;
   text-align: center;
-}
-
-.row-content {
-  padding: 50px 0;
-  border-bottom: 1px ridge;
-  min-height: 200px;
 }
 
 .navbar {
@@ -113,14 +99,6 @@ p {
 
 .card {
   position: relative;
-  top: 20px;
-  background: none;
-}
-
-.card-body {
-  position: relative;
-  top: 20px;
-  left: 80px;
   background: none;
 }
 

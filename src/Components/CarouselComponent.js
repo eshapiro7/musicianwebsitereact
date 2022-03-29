@@ -83,7 +83,7 @@ class Example extends Component {
                     onExited={this.onExited}
                     key={item.id}
                 >
-                    <img src={item.src} alt={item.altText} className='fluid'/>
+                    <img src={item.src} alt={item.altText} />
                     
                 </CarouselItem>
             );

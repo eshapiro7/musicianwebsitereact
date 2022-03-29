@@ -52,7 +52,7 @@ class Music extends Component {
                             <h3> Music </h3>
                         </div>
                     </div>
-                    <div className="row row-content">
+                    <div className="row row-content mt-5">
                         <div className="col">
                             <a onClick={this.toggleModal}>
                                 {" "}

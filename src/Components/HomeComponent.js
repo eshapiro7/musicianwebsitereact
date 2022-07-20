@@ -1,13 +1,14 @@
 import React from "react";
 import CarouselDane from "./CarouselComponent";
+import Dane3 from "../img/dane3.jpeg";
 
 export const Home = () => {
-    return (
-        <>
-            <hr color="white"></hr>
-            <CarouselDane />
-        </>
-    );
+  return (
+    <>
+      {/* <CarouselDane /> */}
+      <img src={Dane3} />
+    </>
+  );
 };
 
 export default Home;

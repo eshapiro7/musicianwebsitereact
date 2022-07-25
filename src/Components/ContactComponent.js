@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
 import background from "../img/dane1.jpg";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 import { send } from "emailjs-com";
 
 function Contact() {
-  const form = useRef();
-
   const [toSend, setToSend] = useState({
     from_name: "",
     to_name: "",
@@ -28,29 +26,7 @@ function Contact() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const [values, setValues] = useState({
-    email: "",
-    name: "",
-    subject: "",
-    message: "",
-  });
-
-  const resetValues = (event) => {
-    event.persist();
-    setValues((values) => ({
-      email: "",
-      name: "",
-      subject: "",
-      message: "",
-    }));
-  };
-
   const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <>
@@ -71,56 +47,47 @@ function Contact() {
           </div>
           <div className="row row-content">
             <div className="col">
-              <form onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  name="from_name"
-                  placeholder="Name"
-                  value={toSend.from_name}
-                  onChange={handleChange}
-                />
-                <input
-                  type="text"
-                  name="reply_to"
-                  placeholder="Email"
-                  value={toSend.reply_to}
-                  onChange={handleChange}
-                />
-                <input
-                  type="text"
-                  name="to_name"
-                  placeholder="Subject"
-                  value={toSend.to_name}
-                  onChange={handleChange}
-                />
-                <input
-                  type="text"
-                  name="message"
-                  placeholder="What's up?"
-                  value={toSend.message}
-                  onChange={handleChange}
-                />
-
-                <button className="btn btn-info ml-3" type="submit">
-                  Submit
-                </button>
-
-                {/*  <Button
-                  className="btn btn-info mt-3 ml-3"
-                  onClick={resetValues}
-                >
+              <Form className="form-group" onSubmit={onSubmit}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="from_name"
+                    placeholder="Name"
+                    value={toSend.from_name}
+                    onChange={handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <input
+                    type="text"
+                    name="reply_to"
+                    placeholder="Email"
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <input
+                    type="text"
+                    name="to_name"
+                    placeholder="Subject"
+                    value={toSend.to_name}
+                    onChange={handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <textarea
+                    type="textarea"
+                    name="message"
+                    placeholder="What's up?"
+                    value={toSend.message}
+                    onChange={handleChange}
+                  />
+                </FormGroup>
+                <Button className="btn btn-info mt-3" type="submit">
                   Submit
                 </Button>
-                */}
-              </form>
-
-              {submitted ? (
-                <div
-                  style={{ color: "white", paddingLeft: 20, paddingTop: 60 }}
-                >
-                  Your form has been submitted.
-                </div>
-              ) : null}
+              </Form>
             </div>
           </div>
         </div>

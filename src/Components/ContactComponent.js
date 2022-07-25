@@ -1,8 +1,33 @@
-import React, { Component, useState } from "react";
+import React, { useState, useRef } from "react";
 import background from "../img/dane1.jpg";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { send } from "emailjs-com";
 
 function Contact() {
+  const form = useRef();
+
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    to_name: "",
+    message: "",
+    reply_to: "",
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send("service_fwq1h8x", "template_pkrd9la", toSend, "tLcSY7xkUjnG0w76M")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
   const [values, setValues] = useState({
     email: "",
     name: "",
@@ -10,36 +35,17 @@ function Contact() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const resetValues = (event) => {
+    event.persist();
+    setValues((values) => ({
+      email: "",
+      name: "",
+      subject: "",
+      message: "",
+    }));
+  };
 
-  const handleEmailInputChange = (event) => {
-    event.persist();
-    setValues((values) => ({
-      ...values,
-      email: event.target.value,
-    }));
-  };
-  const handleNameInputChange = (event) => {
-    event.persist();
-    setValues((values) => ({
-      ...values,
-      name: event.target.value,
-    }));
-  };
-  const handleSubjectInputChange = (event) => {
-    event.persist();
-    setValues((values) => ({
-      ...values,
-      subject: event.target.value,
-    }));
-  };
-  const handleMessageInputChange = (event) => {
-    event.persist();
-    setValues((values) => ({
-      ...values,
-      message: event.target.value,
-    }));
-  };
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,7 +54,11 @@ function Contact() {
 
   return (
     <>
-      <div id="bg-img" style={{ backgroundImage: `url(${background})` }}>
+      <div
+        className="Contact"
+        id="bg-img"
+        style={{ backgroundImage: `url(${background})` }}
+      >
         <div className="container">
           <div className="row row-content">
             <div className="col">
@@ -61,70 +71,49 @@ function Contact() {
           </div>
           <div className="row row-content">
             <div className="col">
-              <Form onSubmit={handleSubmit}>
-                <FormGroup className="col-sm-4">
-                  <Label for="exampleEmail">Email</Label>
-                  <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="Enter email"
-                    value={values.email}
-                    onChange={handleEmailInputChange}
-                  />
-                  {submitted && !values.email ? (
-                    <span>Please enter an email</span>
-                  ) : null}
-                </FormGroup>
+              <form onSubmit={onSubmit}>
+                <input
+                  type="text"
+                  name="from_name"
+                  placeholder="Name"
+                  value={toSend.from_name}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="reply_to"
+                  placeholder="Email"
+                  value={toSend.reply_to}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="to_name"
+                  placeholder="Subject"
+                  value={toSend.to_name}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="message"
+                  placeholder="What's up?"
+                  value={toSend.message}
+                  onChange={handleChange}
+                />
 
-                <FormGroup className="col-sm-4">
-                  <Label for="name">Your Name</Label>
-                  <Input
-                    type="name"
-                    name="name"
-                    id="name"
-                    placeholder="Enter name"
-                    value={values.name}
-                    onChange={handleNameInputChange}
-                  />
-                  {submitted && !values.name ? (
-                    <span>Please enter a name</span>
-                  ) : null}
-                </FormGroup>
+                <button className="btn btn-info ml-3" type="submit">
+                  Submit
+                </button>
 
-                <FormGroup className="col-sm-4">
-                  <Label for="subject">Subject</Label>
-                  <Input
-                    type="subject"
-                    name="subject"
-                    id="subject"
-                    placeholder="Enter Subject"
-                    value={values.subject}
-                    onChange={handleSubjectInputChange}
-                  />
-                  {submitted && !values.subject ? (
-                    <span>Please enter a subject</span>
-                  ) : null}
-                </FormGroup>
+                {/*  <Button
+                  className="btn btn-info mt-3 ml-3"
+                  onClick={resetValues}
+                >
+                  Submit
+                </Button>
+                */}
+              </form>
 
-                <FormGroup className="col-sm-6">
-                  <Label for="message">Message</Label>
-                  <Input
-                    type="textarea"
-                    name="message"
-                    id="message"
-                    placeholder="What's up?"
-                    rows="5"
-                    value={values.message}
-                    onChange={handleMessageInputChange}
-                  />
-                  {submitted && !values.message ? (
-                    <span>Please enter a message</span>
-                  ) : null}
-                </FormGroup>
-
-                <Button className="btn btn-info mt-3 ml-3">Submit</Button>
-              </Form>
               {submitted ? (
                 <div
                   style={{ color: "white", paddingLeft: 20, paddingTop: 60 }}

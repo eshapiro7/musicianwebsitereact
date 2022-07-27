@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import background from "../img/dane1.jpg";
-import { Button, Form, FormGroup, Input } from "reactstrap";
+import { Button, Form, FormGroup } from "reactstrap";
 import { send } from "emailjs-com";
 
 function Contact() {
@@ -10,6 +10,7 @@ function Contact() {
     message: "",
     reply_to: "",
   });
+  const [formSubmission, setFormSubmission] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,16 +18,26 @@ function Contact() {
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       })
+      .then(() => {
+        setToSend({
+          from_name: "",
+          to_name: "",
+          message: "",
+          reply_to: "",
+        });
+      })
+      .then(() => {
+        setFormSubmission(true);
+      })
       .catch((err) => {
         console.log("FAILED...", err);
       });
   };
 
   const handleChange = (e) => {
+    console.log(e);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
-
-  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
@@ -47,47 +58,59 @@ function Contact() {
           </div>
           <div className="row row-content">
             <div className="col">
-              <Form className="form-group" onSubmit={onSubmit}>
-                <FormGroup>
-                  <Input
-                    type="text"
-                    name="from_name"
-                    placeholder="Name"
-                    value={toSend.from_name}
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <input
-                    type="text"
-                    name="reply_to"
-                    placeholder="Email"
-                    value={toSend.reply_to}
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <input
-                    type="text"
-                    name="to_name"
-                    placeholder="Subject"
-                    value={toSend.to_name}
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <textarea
-                    type="textarea"
-                    name="message"
-                    placeholder="What's up?"
-                    value={toSend.message}
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <Button className="btn btn-info mt-3" type="submit">
-                  Submit
-                </Button>
-              </Form>
+              {!formSubmission ? (
+                <Form className="form-group" onSubmit={onSubmit}>
+                  <FormGroup>
+                    <input
+                      type="text"
+                      name="from_name"
+                      placeholder="Name"
+                      value={toSend.from_name}
+                      onChange={handleChange}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <input
+                      type="text"
+                      name="reply_to"
+                      placeholder="Email"
+                      value={toSend.reply_to}
+                      onChange={handleChange}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <input
+                      type="text"
+                      name="to_name"
+                      placeholder="Subject"
+                      value={toSend.to_name}
+                      onChange={handleChange}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <textarea
+                      className="textarea"
+                      name="message"
+                      placeholder="What's up?"
+                      value={toSend.message}
+                      onChange={handleChange}
+                    />
+                  </FormGroup>
+                  <Button className="btn btn-info mt-3 mb-3" type="submit">
+                    Submit
+                  </Button>
+                </Form>
+              ) : (
+                <div className="form-submission">
+                  Your form has been submitted!
+                </div>
+              )}
+              {/* {formSubmission && (
+                <div className="form-submission">
+                  Your form has been submitted!
+                </div>
+              )}
+              */}
             </div>
           </div>
         </div>

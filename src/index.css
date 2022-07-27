@@ -132,12 +132,19 @@ header {
   margin-left: 150px;
 }
 
-textarea {
-  width: 500px;
+.textarea {
+  width: 800px;
   height: 150px;
 
 }
-
-input {
+Input {
   width: 300px;
+}
+
+.form-submission {
+  color: white;
+  font-size: 20px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }

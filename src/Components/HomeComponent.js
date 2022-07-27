@@ -4,10 +4,9 @@ import Dane3 from "../img/dane3.jpeg";
 
 export const Home = () => {
   return (
-    <>
-      {/* <CarouselDane /> */}
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <img src={Dane3} />
-    </>
+    </div>
   );
 };
 

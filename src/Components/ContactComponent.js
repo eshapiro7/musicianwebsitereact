@@ -50,7 +50,7 @@ function Contact() {
           <div className="row row-content">
             <div className="col">
               <h3>Contact Dane</h3>
-              <p>
+              <p className="p-3">
                 Fill out the fields below to get in touch with Dane regarding
                 gig requests, questions, collaborations, or feedback.
               </p>
@@ -62,6 +62,7 @@ function Contact() {
                 <Form className="form-group" onSubmit={onSubmit}>
                   <FormGroup>
                     <input
+                      className="col-md-6 col-sm-12"
                       type="text"
                       name="from_name"
                       placeholder="Name"
@@ -71,6 +72,7 @@ function Contact() {
                   </FormGroup>
                   <FormGroup>
                     <input
+                      className="col-md-6 col-sm-12"
                       type="text"
                       name="reply_to"
                       placeholder="Email"
@@ -80,6 +82,7 @@ function Contact() {
                   </FormGroup>
                   <FormGroup>
                     <input
+                      className="col-md-6 col-sm-12"
                       type="text"
                       name="to_name"
                       placeholder="Subject"
@@ -89,7 +92,7 @@ function Contact() {
                   </FormGroup>
                   <FormGroup>
                     <textarea
-                      className="textarea"
+                      className="textarea col-md-6 col-sm-12"
                       name="message"
                       placeholder="What's up?"
                       value={toSend.message}
@@ -105,12 +108,6 @@ function Contact() {
                   Your form has been submitted!
                 </div>
               )}
-              {/* {formSubmission && (
-                <div className="form-submission">
-                  Your form has been submitted!
-                </div>
-              )}
-              */}
             </div>
           </div>
         </div>

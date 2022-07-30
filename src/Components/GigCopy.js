@@ -14,7 +14,7 @@ class GigCopy extends Component {
               <dt className="col-4">{gig.location}</dt>
               <dt className="col-4">
                 <button className="btn btn-md btn-info">
-                  <a href={gig.ticket} target="_blank">
+                  <a className="font-white" href={gig.ticket} target="_blank">
                     Tickets
                   </a>
                 </button>

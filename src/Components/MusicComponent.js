@@ -53,40 +53,48 @@ class Music extends Component {
             </div>
           </div>
           <div className="row row-content mt-5">
-            <div className="col">
+            <div className="col-md-3 col-sm-12 mb-3">
               <a onClick={this.toggleModal}>
                 {" "}
                 <img
-                  src="https://f4.bcbits.com/img/a3537997805_10.jpg"
-                  alt="olive one"
+                  className="img-fluid"
+                  src="https://i.scdn.co/image/ab67616d0000b273cbc2c23d1bc771c62c9a81e5"
+                  alt="instant treeline"
                   height="200"
                 />
               </a>
             </div>
-            <div className="col">
+            <div className="col-md-3 col-sm-12 mb-3">
               <a target="_blank" onClick={this.toggleModal2}>
                 {" "}
                 <img
-                  src="https://i.scdn.co/image/ab67616d0000b273cbc2c23d1bc771c62c9a81e5"
+                  className="img-fluid"
+                  src="https://f4.bcbits.com/img/a3537997805_10.jpg"
                   height="200"
-                  alt="will Leet"
+                  alt="softest eyes"
                 />
               </a>
             </div>
-            <div className="col">
+            <div className="col-md-3 col-sm-12 mb-3">
               <a onClick={this.toggleModal3}>
                 {" "}
                 <img
+                  className="img-fluid"
                   src="https://f4.bcbits.com/img/0013514705_10.jpg"
                   alt="olive two"
                   height="200"
                 />
               </a>
             </div>
-            <div className="col">
+            <div className="col-md-3 col-sm-12 mb-3">
               <a onClick={this.toggleModal4}>
                 {" "}
-                <img src={HumanRace} alt="human race" height="200" />
+                <img
+                  className="img-fluid"
+                  src={HumanRace}
+                  alt="human race"
+                  height="200"
+                />
               </a>
             </div>
           </div>
@@ -251,7 +259,7 @@ class Music extends Component {
             <div className="modal-body">
               <div className="container-fluid">
                 <div className="row row-content">
-                  <div className="col">
+                  {/*<div className="col">
                     <a target="_blank" href="http://spotify.com">
                       {" "}
                       <img
@@ -271,8 +279,12 @@ class Music extends Component {
                       />
                     </a>
                   </div>
-                  <div className="col">
-                    <a target="_blank" href="https://bandcamp.com/">
+    */}
+                  <div className="col" style={{ textAlign: "center" }}>
+                    <a
+                      target="_blank"
+                      href="https://danescozzariandthehumanrace.bandcamp.com/album/its-christmastime-again"
+                    >
                       {" "}
                       <img src={Bandcamp} alt="bandcamp" height="100" />
                     </a>

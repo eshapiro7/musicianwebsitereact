@@ -1,28 +1,12 @@
-/*
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-*/
 
 body {
-  font-family: monospace;
+  font-family: 'Oswald', sans-serif;;
   background-color: #14436b;
 }
 
 h1,
 h2 {
-  font-family: "Staatliches", cursive;
+  font-family: "Fredericka the Great";
   font-size: 100px;
 }
 
@@ -55,7 +39,7 @@ a:active {
 }
 
 h3 {
-  font-family: "Staatliches", cursive;
+  font-family:'Fredericka the Great', cursive;
   color: white;
   font-size: 50px;
   text-align: center;
@@ -132,14 +116,6 @@ header {
   margin-left: 150px;
 }
 
-.textarea {
-  width: 800px;
-  height: 150px;
-
-}
-Input {
-  width: 300px;
-}
 
 .form-submission {
   color: white;

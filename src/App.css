@@ -4,11 +4,8 @@ body {
   background-color: #14436b;
 }
 
-h1,
-h2 {
-  font-family: "Fredericka the Great";
-  font-size: 50px;
-}
+
+
 
 h2 {
   color: #3046c5;
@@ -83,6 +80,9 @@ p {
 @media only screen and (max-width: 576px) {
   .navbar-text {
     display: none !important;
+  }
+  h1 {
+    font-size: 80px;
   }
 }
 

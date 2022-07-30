@@ -9,11 +9,9 @@ class Header extends Component {
         <Jumbotron fluid>
           <div className="container">
             <div className="row">
-              <div className="col">
-                <h1>
-                  <Link to="/home">Dane Scozzari</Link>
-                </h1>
-              </div>
+              <h1>
+                <Link to="/home">Dane Scozzari</Link>
+              </h1>
             </div>
           </div>
         </Jumbotron>

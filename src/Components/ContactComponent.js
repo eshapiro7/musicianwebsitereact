@@ -63,6 +63,7 @@ function Contact() {
                   <FormGroup>
                     <input
                       className="col-md-6 col-sm-12"
+                      required
                       type="text"
                       name="from_name"
                       placeholder="Name"
@@ -73,6 +74,7 @@ function Contact() {
                   <FormGroup>
                     <input
                       className="col-md-6 col-sm-12"
+                      required
                       type="text"
                       name="reply_to"
                       placeholder="Email"
@@ -83,6 +85,7 @@ function Contact() {
                   <FormGroup>
                     <input
                       className="col-md-6 col-sm-12"
+                      required
                       type="text"
                       name="to_name"
                       placeholder="Subject"
@@ -93,6 +96,7 @@ function Contact() {
                   <FormGroup>
                     <textarea
                       className="textarea col-md-6 col-sm-12"
+                      required
                       name="message"
                       placeholder="What's up?"
                       value={toSend.message}

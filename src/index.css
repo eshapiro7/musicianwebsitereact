@@ -1,13 +1,21 @@
 
 body {
   font-family: 'Oswald', sans-serif;;
-  background-color: #14436b;
+  background-color: #14436b !important;
+  color: white;
 }
 
-h1,
-h2 {
+.dane-scozzari {
+  justify-content: center;
+}
+
+.font-white {
+  color: white;
+}
+
+h1 {
   font-family: "Fredericka the Great";
-  font-size: 100px;
+  font-size: 100px !important;
 }
 
 h2 {
@@ -41,11 +49,20 @@ a:active {
 h3 {
   font-family:'Fredericka the Great', cursive;
   color: white;
-  font-size: 50px;
+  font-size: 50px !important;
   text-align: center;
   position: relative;
   top: 20px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Oswald", sans-serif;
 }
 
 .site-footer {
@@ -56,15 +73,17 @@ h3 {
 }
 
 .jumbotron {
-  margin: 0;
-  padding: px;
-  background-color: #14436b;
+  margin: 0 !important;
+  padding: 0;
+  background-color: #14436b !important;
   color: white;
   text-align: center;
 }
 
 .navbar {
   background-color: #14436b;
+  color: white;
+  font-family: "Oswald", sans-serif;
 }
 
 .tab-content {
@@ -73,9 +92,12 @@ h3 {
   padding: 10px;
 }
 
-.carousel {
-  border: solid white;
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
+
 
 .breadcrumb {
   background: none;
@@ -84,12 +106,27 @@ h3 {
 .card {
   position: relative;
   background: none;
+  border: none !important;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+.card-header {
+  background-color: #14436b !important;
+  padding-bottom: 25px !important;
+
+}
+.card-body {
+  position: relative;
+  background: none;
+  padding: 5px !important;
+  background-color: #14436b;
 }
 
 .form-group {
   color: white;
   position: relative;
   top: 20px;
+  font-family: "Oswald", sans-serif;
 }
 
 #form-submit {
@@ -99,8 +136,12 @@ h3 {
   margin-bottom: 10px;
 }
 
+.btn-link {
+  font-family: "Oswald", sans-serif;
+}
+
 .btn-spotify {
-  background-color: #1db954;
+  background-color: #1db954 !important;
 }
 .modal-body {
   background-color: #14436b;
@@ -108,6 +149,8 @@ h3 {
 
 .modal-header {
   background-color: #14436b;
+  color: white;
+  font-family: "Oswald", sans-serif;
 }
 
 header {
@@ -116,13 +159,28 @@ header {
   margin-left: 150px;
 }
 
+#bg-img {
+  background-size: cover;
+}
 
 .form-submission {
-  color: white;
-  font-size: 20px;
+  color: #14436b;
+  font-size: 40px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  font-family: "Oswald", sans-serif;
+  
+
+
+}
+@media only screen and (max-width: 576px) {
+  .navbar-text {
+    display: none !important;
+  }
+  h1 {
+    font-size: 80px;
+  }
 }
 
 

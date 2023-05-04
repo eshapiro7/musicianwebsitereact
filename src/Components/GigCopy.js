@@ -31,7 +31,13 @@ class GigCopy extends Component {
             <CardHeader>
               <h3>Upcoming Gigs</h3>
             </CardHeader>
-            <CardBody>{gigs}</CardBody>
+            {/* <CardBody>{gigs}</CardBody> */}
+            <CardBody>
+              <div className="temp-gig">
+                Lots of private events on the books this spring, check back soon
+                for updates.
+              </div>
+            </CardBody>
           </Card>
         </div>
       </>

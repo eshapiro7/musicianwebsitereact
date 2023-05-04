@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { Nav, Navbar, NavItem, Jumbotron } from "reactstrap";
+import {
+  Nav,
+  Navbar,
+  NavItem,
+  Jumbotron,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
 
 class Header extends Component {
@@ -29,11 +38,35 @@ class Header extends Component {
                   About
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink className="nav-link" to="/music">
                   Music
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Media
+                </DropdownToggle>
+                <DropdownMenu className="drop-down" right>
+                  <DropdownItem>
+                    <NavLink className="nav-link" to="/music">
+                      Music
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    {" "}
+                    <NavLink className="nav-link" to="/photos">
+                      Photos
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    {" "}
+                    <NavLink className="nav-link" to="/videos">
+                      Videos
+                    </NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <NavItem>
                 <NavLink className="nav-link" to="/gigs">
                   Gigs
@@ -49,25 +82,29 @@ class Header extends Component {
             <span className="navbar-text ml-auto">
               <a
                 className="btn btn-social-icon btn-instagram"
-                href="http://instagram.com/"
+                href="https://www.instagram.com/djdangerousdane/"
+                target={"_blank"}
               >
                 <i className="fa fa-instagram" />
               </a>{" "}
               <a
                 className="btn btn-social-icon btn-facebook"
                 href="http://www.facebook.com/"
+                target={"_blank"}
               >
                 <i className="fa fa-facebook" />
               </a>{" "}
               <a
                 className="btn btn-social-icon btn-spotify"
-                href="http://spotify.com/"
+                href="https://open.spotify.com/album/3Bz940oeHMYiROMq0Ni2m7?si=tb0KwE3XR7qVoq8_IiHTiQ"
+                target={"_blank"}
               >
                 <i className="fa fa-spotify" />
               </a>{" "}
               <a
                 className="btn btn-social-icon btn-google"
                 href="http://youtube.com/"
+                target={"_blank"}
               >
                 <i className="fa fa-youtube" />
               </a>

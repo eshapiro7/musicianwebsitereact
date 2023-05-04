@@ -259,27 +259,6 @@ class Music extends Component {
             <div className="modal-body">
               <div className="container-fluid">
                 <div className="row row-content">
-                  {/*<div className="col">
-                    <a target="_blank" href="http://spotify.com">
-                      {" "}
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/174/174872.png"
-                        height="100"
-                        alt="spotify"
-                      />
-                    </a>
-                  </div>
-                  <div className="col">
-                    <a target="_blank" href="https://www.youtube.com">
-                      {" "}
-                      <img
-                        src="https://cdn0.iconfinder.com/data/icons/web-social-and-folder-icons/512/YouTube.png"
-                        alt="youtube"
-                        height="100"
-                      />
-                    </a>
-                  </div>
-    */}
                   <div className="col" style={{ textAlign: "center" }}>
                     <a
                       target="_blank"
@@ -287,6 +266,19 @@ class Music extends Component {
                     >
                       {" "}
                       <img src={Bandcamp} alt="bandcamp" height="100" />
+                    </a>
+                  </div>
+                  <div className="col">
+                    <a
+                      target="_blank"
+                      href="https://open.spotify.com/album/3Bz940oeHMYiROMq0Ni2m7?si=tb0KwE3XR7qVoq8_IiHTiQ"
+                    >
+                      {" "}
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/174/174872.png"
+                        alt="spotify"
+                        height="100"
+                      />
                     </a>
                   </div>
                 </div>

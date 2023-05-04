@@ -98,6 +98,12 @@ p {
   height: auto;
 }
 
+.home-pic {
+  max-width: 100%;
+  height: auto;
+  opacity: .7;
+}
+
 
 .breadcrumb {
   background: none;
@@ -183,4 +189,27 @@ header {
   }
 }
 
+.temp-gig {
 
+  text-align: center;
+  font-size: 30px;
+  margin-top: 40px;
+
+}
+
+.p-3 {
+  text-align: center;
+}
+
+.drop-down {
+  background-color: #14436b !important;
+  border-color: white !important;
+}
+
+.carousel {
+  text-align: center;
+}
+.carousel-img {
+  width: 75%;
+  
+}
